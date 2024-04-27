@@ -42,21 +42,13 @@ page {
   width: 56px;
   height: 56px;
 }
-
-.nickname-wrapper {
+.page-section {
   display: flex;
-  width: 100%;
-  padding: 16px;
-  box-sizing: border-box;
-  border-top: .5px solid rgba(0, 0, 0, 0.1);
-  border-bottom: .5px solid rgba(0, 0, 0, 0.1);
-  color: black;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.nickname-label {
-  width: 105px;
-}
-
-.nickname-input {
+.checkbox {
   flex: 1;
+  margin-right: 10px;
 }

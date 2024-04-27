@@ -7,8 +7,16 @@
           <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
         </button>
         <view>
-          <button type="primary" plain="true">就决定是你了</button>
+          <button type="primary" plain="true" bindtap="chooseFood">就决定是你了</button>
         </view>
+        <view class="page-section">
+          <checkbox-group bindchange="checkboxChange">
+            <label class="checkbox" wx:for="{{restaurants.fastfood}}">
+              <checkbox value="{{item.value}}" checked="{{item.checked}}" />{{item.name}}
+            </label>
+          </checkbox-group>
+        </view>
+
       </block>
       <block wx:elif="{{!hasUserInfo}}">
         <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
